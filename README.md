@@ -2,12 +2,6 @@
       <img src="https://i.imgur.com/kfXwhqL.png" width="726">
 </p>
 
-<p align="center">
-   <img src="" alt="Unity Version">
-   <img src="" alt="Game Version">
-   <img src="" alt="License">
-</p>
-
 ## About
 
 About Text Here
