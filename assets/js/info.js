@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
     const urlParams = new URLSearchParams(window.location.search);
     const product = urlParams.get('product');
-    const productDetailsSlider = document.querySelector('.portfolio-details-slider .swiper-wrapper');
-    const productInfoList = document.querySelector('.portfolio-info ul');
-    const productDescription = document.querySelector('.portfolio-description h2');
-    const productDescriptionText = document.querySelector('.portfolio-description p');
+    const productDetailsSlider = document.querySelector('.weapon-details-slider .swiper-wrapper');
+    const productInfoList = document.querySelector('.weapon-info ul');
+    const productDescription = document.querySelector('.weapon-description h2');
+    const productDescriptionText = document.querySelector('.weapon-description p');
   
   
     const products = {
@@ -520,7 +520,7 @@ document.addEventListener("DOMContentLoaded", function() {
       productDescriptionText.textContent = productData.description;
   
   
-      new Swiper('.portfolio-details-slider', {
+      new Swiper('.weapon-details-slider', {
         speed: 400,
         loop: true,
         autoplay: {
