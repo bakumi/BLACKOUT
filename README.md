@@ -1,3 +1,28 @@
-# BLACKOUT - стрелковый комплекс
+<p align="center">
+      <img src="https://i.imgur.com/kfXwhqL.png" width="726">
+</p>
 
-**BLACKOUT - это современный стрелковый комплекс, предоставляющий клиентам возможность погрузиться в мир стрельбы и адреналина. Мы предлагаем широкий выбор оружия, профессиональных инструкторов и уникальную атмосферу, которая делает нас лучшим выбором для любителей стрельбы.**
+<p align="center">
+   <img src="" alt="Unity Version">
+   <img src="" alt="Game Version">
+   <img src="" alt="License">
+</p>
+
+## About
+
+About Text Here
+
+## Documentation
+
+Documentation Here
+
+## Distribute
+
+- [Service Name](Page Link)
+
+
+## Developers
+
+- [Delevoper Name](GitHub Profile Link)
+
+## License
