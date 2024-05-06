@@ -2,21 +2,6 @@
       <img src="https://i.imgur.com/kfXwhqL.png" width="726">
 </p>
 
-## About
+## О сайте
 
-About Text Here
-
-## Documentation
-
-Documentation Here
-
-## Distribute
-
-- [Service Name](Page Link)
-
-
-## Developers
-
-- [Delevoper Name](GitHub Profile Link)
-
-## License
+Стрелковый комплекс BLACKOUT - это современный стрелковый комплекс, предоставляющий клиентам возможность погрузиться в мир стрельбы и адреналина. Мы предлагаем широкий выбор оружия, профессиональных инструкторов и уникальную атмосферу, которая делает нас лучшим выбором для любителей стрельбы.
