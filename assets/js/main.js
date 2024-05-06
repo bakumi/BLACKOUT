@@ -2,7 +2,7 @@
   "use strict";
 
   /**
-   * Easy selector helper function
+   * Помощник выбора селекторов
    */
   const select = (el, all = false) => {
     el = el.trim()
@@ -14,7 +14,7 @@
   }
 
   /**
-   * Easy event listener function
+   * Обработчик событий
    */
   const on = (type, el, listener, all = false) => {
     let selectEl = select(el, all)
@@ -28,14 +28,14 @@
   }
 
   /**
-   * Easy on scroll event listener 
+   * Обработчик прокрутки страницы
    */
   const onscroll = (el, listener) => {
     el.addEventListener('scroll', listener)
   }
 
   /**
-   * Navbar links active state on scroll
+   * Активные секционные кнопки в нав. меню
    */
   let navbarlinks = select('#navbar .scrollto', true)
   const navbarlinksActive = () => {
@@ -55,7 +55,7 @@
   onscroll(document, navbarlinksActive)
 
   /**
-   * Scrolls to an element with header offset
+   * Прокрутка к элементу с учётом смещения заголовка
    */
   const scrollto = (el) => {
     let header = select('#header')
@@ -73,7 +73,7 @@
   }
 
   /**
-   * Toggle .header-scrolled class to #header when page is scrolled
+   * Переключать класс .header-scrolled для #header при прокрутке страницы
    */
   let selectHeader = select('#header')
   if (selectHeader) {
@@ -89,7 +89,7 @@
   }
 
   /**
-   * Back to top button
+   * Кнопка вернуться наверх
    */
   let backtotop = select('.back-to-top')
   if (backtotop) {
@@ -105,7 +105,7 @@
   }
 
   /**
-   * Mobile nav toggle
+   * Мобильное меню
    */
   on('click', '.mobile-nav-toggle', function(e) {
     select('#navbar').classList.toggle('navbar-mobile')
@@ -113,9 +113,7 @@
     this.classList.toggle('bi-x')
   })
 
-  /**
-   * Mobile nav dropdowns activate
-   */
+
   on('click', '.navbar .dropdown > a', function(e) {
     if (select('#navbar').classList.contains('navbar-mobile')) {
       e.preventDefault()
@@ -124,7 +122,7 @@
   }, true)
 
   /**
-   * Scrool with ofset on links with a class name .scrollto
+   * Прокрутка со смещением при клике на ссылки с классом .scrollto.
    */
   on('click', '.scrollto', function(e) {
     if (select(this.hash)) {
@@ -142,7 +140,7 @@
   }, true)
 
   /**
-   * Scroll with ofset on page load with hash links in the url
+   * Прокрутить со смещением при загрузке страницы с якорными ссылками в URL.
    */
   window.addEventListener('load', () => {
     if (window.location.hash) {
@@ -153,29 +151,29 @@
   });
 
   /**
-   * Porfolio isotope and filter
+   * Оружейные фильтры
    */
   window.addEventListener('load', () => {
-    let portfolioContainer = select('.portfolio-container');
-    if (portfolioContainer) {
-      let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: '.portfolio-item',
+    let weaponContainer = select('.weapon-container');
+    if (weaponContainer) {
+      let weaponIsotope = new Isotope(weaponContainer, {
+        itemSelector: '.weapon-item',
         layoutMode: 'fitRows'
       });
 
-      let portfolioFilters = select('#portfolio-flters li', true);
+      let weaponFilters = select('#weapon-flters li', true);
 
-      on('click', '#portfolio-flters li', function(e) {
+      on('click', '#weapon-flters li', function(e) {
         e.preventDefault();
-        portfolioFilters.forEach(function(el) {
+        weaponFilters.forEach(function(el) {
           el.classList.remove('filter-active');
         });
         this.classList.add('filter-active');
 
-        portfolioIsotope.arrange({
+        weaponIsotope.arrange({
           filter: this.getAttribute('data-filter')
         });
-        portfolioIsotope.on('arrangeComplete', function() {
+        weaponIsotope.on('arrangeComplete', function() {
           AOS.refresh()
         });
       }, true);
@@ -183,17 +181,15 @@
 
   });
 
-  /**
-   * Initiate portfolio lightbox 
-   */
-  const portfolioLightbox = GLightbox({
-    selector: '.portfolio-lightbox'
+
+  const weaponLightbox = GLightbox({
+    selector: '.weapon-lightbox'
   });
 
   /**
-   * Portfolio details slider
+   * Слайдер оружий
    */
-  new Swiper('.portfolio-details-slider', {
+  new Swiper('.weapon-details-slider', {
     speed: 400,
     loop: true,
     autoplay: {
@@ -207,36 +203,9 @@
     }
   });
 
-  /**
-   * Testimonials slider
-   */
-  new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 40
-      },
-
-      1200: {
-        slidesPerView: 3,
-      }
-    }
-  });
 
   /**
-   * Animation on scroll
+   * Анимация при скролле
    */
   window.addEventListener('load', () => {
     AOS.init({
@@ -257,7 +226,7 @@
    * LocalStorage
    */
 document.addEventListener('DOMContentLoaded', () => {
-  const weaponCards = document.querySelectorAll('.portfolio-item');
+  const weaponCards = document.querySelectorAll('.weapon-item');
 
   weaponCards.forEach(card => {
     card.addEventListener('click', () => {
