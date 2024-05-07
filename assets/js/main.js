@@ -1,3 +1,18 @@
+  /**
+   * Загрузка страницы
+   */
+document.addEventListener("DOMContentLoaded", function() {
+  gsap.to(".loader-container", {opacity: 0, duration: 0.8, delay: 1, onComplete: function() {
+    document.body.removeChild(document.querySelector(".loader-container"));
+  }});
+});
+
+window.addEventListener("load", function() {
+  gsap.to(".loader", {opacity: 0, duration: 0.5, delay: 0.8});
+  gsap.to(".loader2", {opacity: 0, duration: 0.5, delay: 0.8});
+});
+
+
 (function() {
   "use strict";
 
