@@ -67,7 +67,9 @@ document.addEventListener("DOMContentLoaded", function() {
   
     "Steyr-Aug-a3": {
       "images": [
-          "assets/img/guns/carabine/Steyr Aug a3.png"
+          "assets/img/guns/carabine/Steyr Aug a3.png",
+          "assets/img/guns/carabine/Steyr Aug a3 2.png",
+          
       ],
       "characteristics": [
           { "label": "Производитель", "value": "Steyr Mannlicher" },
@@ -84,7 +86,9 @@ document.addEventListener("DOMContentLoaded", function() {
   
     "Tavor-tar-21": {
       "images": [
-          "assets/img/guns/carabine/Tavor tar-21.png"
+          "assets/img/guns/carabine/Tavor tar-21.png",
+          "assets/img/guns/carabine/Tavor tar-21 2.png"
+
       ],
       "characteristics": [
           { "label": "Производитель", "value": "Israel Weapon Industries" },
@@ -101,7 +105,8 @@ document.addEventListener("DOMContentLoaded", function() {
   
     "FN-F2000": {
       "images": [
-          "assets/img/guns/carabine/FN F2000.png"
+          "assets/img/guns/carabine/FN F2000.png",
+          "assets/img/guns/carabine/FN F2000 2.png"
       ],
       "characteristics": [
           { "label": "Производитель", "value": "FN Herstal" },
