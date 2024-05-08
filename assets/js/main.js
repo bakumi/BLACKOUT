@@ -122,7 +122,7 @@ window.addEventListener("load", function() {
   /**
    * Мобильное меню
    */
-  on('click', '.mobile-nav-toggle', function(e) {
+    on('click', '.mobile-nav-toggle', function(e) {
     select('#navbar').classList.toggle('navbar-mobile')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
@@ -249,4 +249,67 @@ document.addEventListener('DOMContentLoaded', () => {
       localStorage.setItem('selectedProduct', productName);
     });
   });
+});
+
+
+ /**
+   * Форма отправки писем с помощью EmailJS
+   */
+ (function(){
+  emailjs.init("LV4XoaHmNlu8iJ2YV");
+})();
+
+
+function showNotification(message) {
+  var notification = document.getElementById('notification');
+  notification.innerText = message;
+  notification.style.display = 'block';
+  setTimeout(function() {
+      notification.style.opacity = '1';
+  }, 10);
+  setTimeout(function() {
+      notification.style.opacity = '0';
+  }, 1500);
+  setTimeout(function() {
+      notification.style.display = 'none';
+  }, 2000);
+}
+
+function submitForm(event) {
+  event.preventDefault();
+
+  var formData = {
+    name: document.getElementById('sendername').value,
+    subject: document.getElementById('subject').value,
+    message: document.getElementById('message').value,
+    senderemail: document.getElementById('senderemail').value
+  };
+
+  emailjs.send('service_f7uobud', 'template_tu42zyr', formData)
+    .then(function(response) {
+      console.log('Сообщение успешно отправлено!', response);
+      showNotification('Сообщение успешно отправлено!');
+    })
+    .catch(function(error) {
+      console.error('Ошибка при отправке сообщения:', error);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const inputFields = document.querySelectorAll('.input__field');
+
+  inputFields.forEach(function(inputField) {
+    inputField.addEventListener('focus', function() {
+      this.previousElementSibling.classList.add('focused');
+    });
+
+    inputField.addEventListener('blur', function() {
+      if (!this.value.trim()) {
+        this.previousElementSibling.classList.remove('focused');
+      }
+    });
+  });
+
+  const contactForm = document.getElementById('contactForm');
+  contactForm.addEventListener('submit', submitForm);
 });
