@@ -1127,12 +1127,11 @@ section {
 
 .contact .email-form input,
 .contact .email-form textarea {
-  border-radius: 2px;
+  border-radius: 8px !important;
   box-shadow: none;
   font-size: 14px;
   background: rgb(36, 36, 36);
   border: none;
-  
 }
 
 .contact .email-form input {
