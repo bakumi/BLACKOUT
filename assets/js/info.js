@@ -420,7 +420,7 @@ document.addEventListener("DOMContentLoaded", function() {
       "description": "Lever Action X Model - это ружье с рычажным затвором, обладающее классическим стилем и надёжностью. Оно часто используется для охоты на коротких дистанциях."
     },
   
-    "Smith-&-Wesson-m&p": {
+    "Smith-Wesson-mp": {
       "images": [
           "assets/img/guns/shotgun/Smith & Wesson m&p.png"
       ],
